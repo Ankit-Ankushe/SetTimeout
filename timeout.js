@@ -1,23 +1,15 @@
-function first(){
-    console.log('first')
-}
-
-function second(callback){
-    setTimeout(() => {
-        console.log('second')
-        callback()
-    })
-}
-function third(){
-    console.log('third')
-}
-
-// asynchronous call
-first()
-second()
-third()
-
-
-// synchronous call
-first()
-second(third)
+function console1() {
+    console.log("1");
+  }
+  
+  function print1() {
+    setTimeout(console1, 1000);
+  }
+  
+  function print2() {
+    console.log("2");
+  }
+  
+  // TO print the code in sync way I will add this code
+  print1()
+  setTimeout(print2,2000)
